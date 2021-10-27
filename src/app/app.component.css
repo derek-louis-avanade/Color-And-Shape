@@ -1,0 +1,122 @@
+#appMaster {
+  display: block;
+}
+
+#toolBar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.07, 0.35, 0, 0.98);
+}
+
+.toolBarHidden {
+  transform: translateY(100%);
+}
+
+.toolBarVisible {
+  margin: 0 0 25px 0;
+  transform: translateY(0%);
+}
+
+#buttonRow {
+  width: 50%;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+#buttonRow button {
+  font-size: 10px;
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  border: 0.1em solid white;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.5s;
+}
+
+#buttonRow button:hover {
+  transform: scale(1.05);
+}
+
+#BGLogo1 {
+  width: 3em;
+  height: 2em;
+  background-color: white;
+}
+
+#BGLogo2 {
+  width: 0.3em;
+  height: 1em;
+  background-color: rgb(255, 255, 255);
+}
+
+#BGLogo3 {
+  width: 1.5em;
+  height: 0.5em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+#CLogo {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 0.2em solid #fff;
+}
+
+#CFLogo {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#RLogoLid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: 0.5s;
+}
+
+.lidLift {
+  transform: rotate(-55deg) translate(-0.3em, -0.9em);
+}
+
+#RLogo1 {
+  width: 0.7em;
+  height: 0.3em;
+  border-left: 0.1em solid white;
+  border-top: 0.1em solid white;
+  border-right: 0.1em solid white;
+}
+
+#RLogo2 {
+  width: 1.9em;
+  height: 0.5em;
+  background-color: white;
+}
+
+#RLogo3 {
+  width: 1.5em;
+  height: 2em;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.RLogoStripe {
+  height: 2em;
+  width: 0.1em;
+  background-color: rgb(223, 223, 223);
+}
