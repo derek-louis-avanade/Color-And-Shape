@@ -120,3 +120,24 @@
   width: 0.1em;
   background-color: rgb(223, 223, 223);
 }
+
+@media (max-width: 1000px) {
+  #buttonRow {
+    width: 75%;
+  }
+}
+
+@media (max-width: 625px) {
+  #buttonRow {
+    width: 90%;
+  }
+  #buttonRow button {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 400px) {
+  #buttonRow button {
+    font-size: 8px;
+  }
+}
