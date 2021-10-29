@@ -3,18 +3,18 @@
 </canvas>
 <div id="toolBar" class="toolBarHidden" #toolBar>
     <div id="buttonRow">
-    <button (click)="BG()">
+    <button (click)="BG()" description="Change background colors">
         <div id="BGLogo1"></div>
         <div id="BGLogo2"></div>
         <div id="BGLogo3"></div>
     </button>
-    <button (click)="circle()">
+    <button (click)="circle()" description="Add circle outline">
         <div id="CLogo"></div>
     </button>
-    <button (click)="circleFilled()">
+    <button (click)="circleFilled()" description="Add filled circle">
         <div id="CFLogo"></div>
     </button>
-    <button (click)="reset()" (mouseenter)="hover()" (mouseleave)="endHover()">
+    <button (click)="reset()" (mouseenter)="hover()" (mouseleave)="endHover()" description="Remove all shapes">
         <div id="RLogoLid" #lid>
         <div id="RLogo1"></div>
         <div id="RLogo2"></div>
