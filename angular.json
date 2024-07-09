@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularPlayground": {
+    "color-and-shape": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularPlayground",
+            "outputPath": "dist/color-and-shape",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AngularPlayground:build:production"
+              "browserTarget": "color-and-shape:build:production"
             },
             "development": {
-              "browserTarget": "AngularPlayground:build:development"
+              "browserTarget": "color-and-shape:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularPlayground:build:production"
+            "browserTarget": "color-and-shape:build:production"
           }
         },
         "test": {

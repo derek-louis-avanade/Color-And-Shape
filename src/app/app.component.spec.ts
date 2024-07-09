@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'AngularPlayground'`, () => {
+  it(`should have as title 'color-and-shape'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('AngularPlayground');
+    expect(app.title).toEqual('color-and-shape');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('AngularPlayground app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('color-and-shape app is running!');
   });
 });
