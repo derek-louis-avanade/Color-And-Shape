@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "AngularPlayground"
+  "defaultProject": "AngularPlayground",
+  "cli": {
+    "analytics": false
+  }
 }
