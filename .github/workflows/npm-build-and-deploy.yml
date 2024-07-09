@@ -1,0 +1,57 @@
+name: Build and Deploy Angular App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Angular app
+        run: npm run build
+
+      - name: Archive artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-artifact
+          path: dist/
+
+# make a pr, deploy to dev, leave PR open
+# verify changes are good in dev
+# then close PR after that
+
+    #   - name: Deploy to Azure Static Web Apps
+    #     uses: azure/static-web-apps-deploy@v1
+    #     with:
+    #       azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+    #       repo_token: ${{ secrets.GITHUB_TOKEN }}
+    #       app_location: "/"
+    #       api_location: "api"
+    #       app_build_command: ""
+    #       api_build_command: ""
+
+#   close_pull_request_job:
+    # if: github.event_name == 'pull_request' && github.event.action == 'closed'
+#     runs-on: ubuntu-latest
+#     name: Close Pull Request Job
+#     steps:
+#       - name: Close Pull Request
+#         id: closepullrequest
+#         uses: Azure/static-web-apps-deploy@v1
+#         with:
+#           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_JOLLY_TREE_03A2F5B0F }}
+#           action: "close"
