@@ -19,6 +19,8 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: log
+        run: echo "7777777 {angular.json#Object.values(data.projects)[0].architect.build.options.outputPath}"
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
